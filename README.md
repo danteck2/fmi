@@ -4,7 +4,7 @@
 * Cat mai simplu
 * Cat mai clar
 * Doar esenta
-* Despre cum sa treci fiecare materi
+* Despre cum sa treci fiecare materie
 
 ## Calificative
 * Am folosit urmatoarele calificative:
