@@ -1,10 +1,10 @@
 # Cum sa termini facultatea fara stres!
 ##### Este relevant doar pentru studentii din [Facultatea de Matematica si Informatica Bucuresti](http://fmi.unibuc.ro/ro/ "fmi").
 ##### Aici o sa ma impart cu experinta personala subiectiva legata de examene.
+* Despre cum sa treci fiecare materie
 * Cat mai simplu
 * Cat mai clar
 * Doar esenta
-* Despre cum sa treci fiecare materie
 
 ## Calificative
 * Am folosit urmatoarele calificative:
