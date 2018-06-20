@@ -1,0 +1,93 @@
+;EX1
+operator STORAGE 2
+sectie STORAGE 3
+durata FUNCTION RN1,D4
+0.20,8/0.30,10/0.80,15/1.0,25
+GENERATE (Exponential(1,0,10))
+ENTER operator
+ADVANCE 3,1
+LEAVE operator
+TRANSFER 0.05,,altSpital
+ENTER sectie
+ADVANCE FN$durata
+LEAVE sectie
+SEIZE farmacie
+ADVANCE 5,1
+RELEASE farmacie
+TERMINATE
+altSpital TERMINATE
+;am considerat o zi de lucru 8 ore
+GENERATE 1280
+TERMINATE 1
+;START 1
+
+;EX2
+operator STORAGE 2
+sectie STORAGE 3
+durata FUNCTION RN1,D4
+0.20,8/0.30,10/0.80,15/1.0,25
+GENERATE (Exponential(1,0,10))
+ENTER operator
+ADVANCE 3,1
+LEAVE operator
+TRANSFER 0.05,,altSpital
+ENTER sectie
+ADVANCE FN$durata
+LEAVE sectie
+SEIZE farmacie
+ADVANCE 5,1
+RELEASE farmacie
+TERMINATE
+altSpital TERMINATE 1
+;START 100
+
+;EX3
+operator STORAGE 2
+sectie STORAGE 3
+durata FUNCTION RN1,D4
+0.20,8/0.30,10/0.80,15/1.0,25
+numarul VARIABLE 0
+GENERATE (Exponential(1,0,10))
+QUEUE coada
+ENTER operator
+ADVANCE 3,1
+LEAVE operator
+DEPART coada
+TRANSFER 0.05,,altSpital
+ENTER sectie
+ADVANCE FN$durata
+LEAVE sectie
+SEIZE farmacie
+ADVANCE 5,1
+RELEASE farmacie
+TERMINATE
+altSpital TERMINATE 
+hist TABLE Q$coada,0,5,10
+GENERATE 1
+TABULATE hist
+TERMINATE 1
+;START 1
+
+;EX4
+operator STORAGE 2
+sectie STORAGE 3
+durata FUNCTION RN1,D4
+0.20,8/0.30,10/0.80,15/1.0,25
+numarul VARIABLE 0
+GENERATE (Exponential(1,0,10))
+QUEUE coada
+ENTER operator
+ADVANCE 3,1
+LEAVE operator
+DEPART coada
+TRANSFER 0.05,,altSpital
+ENTER sectie
+ADVANCE FN$durata
+LEAVE sectie
+SEIZE farmacie
+ADVANCE 5,1
+RELEASE farmacie
+TERMINATE 1
+altSpital SAVEVALUE numarul+,1
+TERMINATE 
+;START 1

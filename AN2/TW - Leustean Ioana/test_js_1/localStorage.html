@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="div1">
+
+<input id="input"></input>
+<button>Salveaza</button>
+<p id="p"></p>
+</div>
+
+
+
+</body>
+</html>
+<script>
+
+    // Store
+    if(localStorage.lastname) {
+    var x = parseInt(localStorage.lastname);
+    
+    localStorage.setItem("lastname", x+1);
+    }
+    else {localStorage.setItem("lastname", "1");}
+    // Retrieve
+    document.getElementById("p").innerHTML = localStorage.getItem("lastname");
+	
+    
+</script>

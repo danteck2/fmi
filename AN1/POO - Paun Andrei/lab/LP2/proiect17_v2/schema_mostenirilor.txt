@@ -1,0 +1,19 @@
+Player -> OnePlayer
+Player2
+TwoPlayer : OnePlayer, Player2 -> VoleyPlayer -> Notepad
+
+Player: (W|UP) (S|DOWN) (A|LEFT) (D|RIGHT)
+  W
+A S D
+
+Player2: (I|8) (K|5) (J|4) (L|6)
+  8
+4 5 6
+
+OnePlayer: (Player) SHIFT+Z CTRL+Z ALT+Z
+
+TwoPlayer: (OnePlayer), (Player2) SHIFT+/ CTRL+/ ALT+/
+
+VoleyPlayer: (TwoPlayer) LEFT_CLICK RIGHT_CLICK
+
+InputpadPlayer: (VoleyPlayer) CAPS_LOCK(Pentru lockInput) CTRL+SHIFT+ALT+B

@@ -1,0 +1,158 @@
+body {
+	background-color: #fff;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+header{
+	max-height: 100px;
+	background-color: #0000ff;
+}
+header img{
+	float: left;
+	width: 40px;
+}
+header h2{
+	padding: 10px;
+	text-align: center;
+	color:#f00;
+	font-style: italic;
+}
+header nav{
+	max-height: 50px;
+	background-color: #ffff00;
+}
+header p {
+	
+}
+header ul {
+	padding: 10px;
+}
+header li {
+	padding: 5px;
+	margin: 5px;
+	display: inline;
+	border: 1px solid #000;
+    border-radius: 0px;
+}
+section {
+	width: 300px;
+    padding: 10px;
+	margin: 40px;
+	border: 1px solid #000;
+    border-radius: 0px;
+}
+section h2 {
+	text-align: center;
+	padding: 5px;
+}
+section img {
+	padding: 20px;
+	width: 145px;
+	 transition: width 3s;
+}
+section img:hover {
+	padding-left: 50px;
+	width: 300px;
+}
+section ul {
+	float: left;
+	border: 1px solid #000;
+    border-radius: 0px;
+	margin: 20px;
+}
+.section1 p{
+	width: 50px;
+    padding-left: 23px;
+	border: 1px solid #000;
+    border-radius: 0px;
+}
+.section2 p{
+	width: 50px;
+    padding-left: 23px;
+	border: 1px solid #000;
+    border-radius: 0px;
+}
+.aside{
+	border: 1px solid #000;
+    border-radius: 30px;
+    margin: 75px;
+	width: 200px;
+    height: 300px;
+	background-color: #ff00d7;
+}
+.aside p{
+	padding-top: 125px;
+    padding-left: 75px;
+}
+footer {
+	max-height: 60px;
+}
+footer p{
+	text-align: center;
+    padding: 10px; 
+	background-color: #00ff00;
+}
+
+#cf img {
+  transition: opacity 1s ease-in-out;
+}
+.container { 
+	position: relative; 
+	max-width: 960px; 
+	margin: 0 auto; 
+	padding: 0;
+	border: 1px solid #000;
+    border-radius: 0px;
+}
+.right_block {
+	background-image: url(imagine2);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+	width: 400px;
+		border: 0px solid #000;
+    border-radius: 0px;
+}
+.table {
+	
+	width:100%;
+		border: 1px solid #000;
+    border-radius: 0px;
+}
+.table tr{
+	border: 1px solid #000;
+    border-radius: 0px;
+}
+.table th{
+	border: 1px solid #000;
+    border-radius: 0px;
+}
+.table td{
+	text-align: center;
+	border: 1px solid #000;
+    border-radius: 0px;
+	padding-top: 200px;
+    padding-bottom: 200px;
+	
+}
+.backgound_image {
+	background-color: #0000ff;
+	width: 300px;
+	height: 300px;
+}
+/* Print */
+@media print {
+	.container { width: 768px; }
+	header {display: none;}
+	footer {display: none;}
+}
+@media only screen and (min-width: 100px) and (max-width: 600px) {
+article, aside, details, figcaption, figure, header img,
+footer, header, hgroup, menu, nav, section {
+	float: none;
+}
+	.aside{
+		display: none;
+	}
+}

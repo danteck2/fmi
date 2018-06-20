@@ -1,0 +1,28 @@
+Nu m-a lasat sa iau subiect si nu am avut timp sa copiez subiectul. Dureaza 2 ore. Subiect teorie, trebuie luat 5, subiect sql, trebuie luat 5. Ce se pica, se de la toamna.
+Design:
+
+2 puncte
+1a: ceva cu model relational, trebuia sa zici de reguli de integritate
+1b: diferenta dintre normalizare si denormalizare, care e mai buna si cand
+
+4 puncte
+2: sa faci o schema conceptuala pe o poveste cu companie, are angajati care pot fi testeri, dezvoltatori, administratori. Administratorii administreaza proiecte, testerii depisteaza buguri, dezvoltatorii repara buguri, proiectele au mai multe versiuni si bugurile sunt pe versiuni.
+a) sa faci schema conceptuala
+b) sa faci schema relationala intre angajati si buguri
+c) nu mai stiu
+
+3 puncte
+3: ai o relatie
+R(student, materie, profesor)
+erau niste restrictii: la o materie, un student poate avea un singur profesor si inca una, nu mai stiu care
+a) tampenii d'astea cu algebre ceva
+b) sa zici daca e in fn3 si de ce
+c) ceva de optimizare
+
+SQL
+
+5 exercitii cu vreo 6 tabele care se leaga intre ele in ultimul hal
+printre alea sa creezi un tabel, sa updatezi o coloana si alte interogari complexe
+
+2 ore, clock's ticking
+ 

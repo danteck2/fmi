@@ -1,0 +1,426 @@
+Solutia aplicatiilor din Laboratorul 3
+
+; Punctul 2: Sa se simuleze sistemul pentru primii 50 de clienti care au folosit bancomatele.
+
+; definirea unor constante/expresii variabile si entitati necesare in cadrul programului
+capacitateMaxima EQU 10000
+; se predefineste constanta capacitateMaxima
+alimentareBancomat1 VARIABLE capacitateMaxima - P$sumaCurenta1
+alimentareBancomat2 VARIABLE capacitateMaxima - P$sumaCurenta2
+; se predefineste o expresie care variaza in sistem pentru modelarea sumei cu care
+; angajatul unei banci alimenteaza bancomatul daca este necesar
+sumaExtrasa VARIABLE 10#(DUNIFORM(1,0,195)) + 50
+bancomat1 STORAGE 10000
+bancomat2 STORAGE 10000
+; bancomat1 (bancomat2) - numele entitatii de depozitare, va contine suma existenta in bancomat
+; dupa depunerea initiala va fi de 10000 de lei in fiecare dintre bancomate
+durataTranzactiei FUNCTION RN1,D5
+0.25,3/0.65,5/0.85,8/0.95,10/1,12
+
+; capacitateMaxima - numarul maxim de unitati de depozitare, suma maxima care poate exista in bancomat
+; modelarea alimentarii initiale a bancomatului
+; initial entitatea de depozitare contine 0 unitati de depozitare ocupate
+
+GENERATE ,,,1,2
+ENTER bancomat1,capacitateMaxima
+ENTER bancomat2,capacitateMaxima
+TERMINATE
+
+; modelarea extragerilor din bancomate
+
+GENERATE (Exponential(1,0,20))
+TRANSFER 0.5,,mergiLaBancomat2
+SEIZE banc1
+ASSIGN 1,banc1
+ASSIGN suma1,V$sumaExtrasa
+TEST GE S$bancomat1,P$suma1,pleaca
+LEAVE bancomat1,P$suma1
+TRANSFER ,durata
+mergiLaBancomat2 SEIZE banc2
+ASSIGN 1,banc2
+ASSIGN suma2,V$sumaExtrasa
+TEST GE S$bancomat2,P$suma2,pleaca
+LEAVE bancomat2,P$suma2
+durata ADVANCE FN$durataTranzactiei
+; durataTranzactiei - poate lua una dintre valorile i = 3; 5; 8; 10; 12 cu probabilitatile asociate 
+; pi = 0.25; 0.4; 0.2; 0.1; 0.05
+pleaca RELEASE P1
+TERMINATE 1
+
+; modelarea alimentarii bancomatului la fiecare 2 ore daca angajatul constata ca bancomatul detine 
+; o suma mai mica de 5000 de lei
+GENERATE 120
+ASSIGN sumaCurenta1,S$bancomat1
+TEST LE P$sumaCurenta1,5000,nuAlimenteaza1
+ENTER bancomat1,V$alimentareBancomat1
+nuAlimenteaza1 ASSIGN sumaCurenta2,S$bancomat2
+TEST LE P$sumaCurenta2,5000,nuAlimenteaza
+ENTER bancomat2,V$alimentareBancomat2
+nuAlimenteaza TERMINATE
+
+; Pentru rulare dam: START 50
+
+; --------------------------------------------------------------------------------------------------
+
+; Punctul 3: Sa se simuleze activitatea sistemului in primele 10 ore.
+
+; definirea unor constante/expresii variabile si entitati necesare in cadrul programului
+capacitateMaxima EQU 10000
+; se predefineste constanta capacitateMaxima
+alimentareBancomat1 VARIABLE capacitateMaxima - P$sumaCurenta1
+alimentareBancomat2 VARIABLE capacitateMaxima - P$sumaCurenta2
+; se predefineste o expresie care variaza in sistem pentru modelarea sumei cu care
+; angajatul unei banci alimenteaza bancomatul daca este necesar
+sumaExtrasa VARIABLE 10#(DUNIFORM(1,0,195)) + 50
+bancomat1 STORAGE 10000
+bancomat2 STORAGE 10000
+; bancomat1 (bancomat2) - numele entitatii de depozitare, va contine suma existenta in bancomat
+; dupa depunerea initiala va fi de 10000 de lei in fiecare dintre bancomate
+durataTranzactiei FUNCTION RN1,D5
+0.25,3/0.65,5/0.85,8/0.95,10/1,12
+
+; capacitateMaxima - numarul maxim de unitati de depozitare, suma maxima care poate exista in bancomat
+; modelarea alimentarii initiale a bancomatului
+; initial entitatea de depozitare contine 0 unitati de depozitare ocupate
+
+GENERATE ,,,1,2
+ENTER bancomat1,capacitateMaxima
+ENTER bancomat2,capacitateMaxima
+TERMINATE
+
+; modelarea extragerilor din bancomate
+
+GENERATE (Exponential(1,0,20))
+TRANSFER 0.5,,mergiLaBancomat2
+SEIZE banc1
+ASSIGN 1,banc1
+ASSIGN suma1,V$sumaExtrasa
+TEST GE S$bancomat1,P$suma1,pleaca
+LEAVE bancomat1,P$suma1
+TRANSFER ,durata
+mergiLaBancomat2 SEIZE banc2
+ASSIGN 1,banc2
+ASSIGN suma2,V$sumaExtrasa
+TEST GE S$bancomat2,P$suma2,pleaca
+LEAVE bancomat2,P$suma2
+durata ADVANCE FN$durataTranzactiei
+; durataTranzactiei - poate lua una dintre valorile i = 3; 5; 8; 10; 12 cu probabilitatile asociate 
+; pi = 0.25; 0.4; 0.2; 0.1; 0.05
+pleaca RELEASE P1
+TERMINATE ; TERMINATE 1 a devenit TERMINATE
+
+; modelarea alimentarii bancomatului la fiecare 2 ore daca angajatul constata ca bancomatul detine 
+; o suma mai mica de 5000 de lei
+GENERATE 120
+ASSIGN sumaCurenta1,S$bancomat1
+TEST LE P$sumaCurenta1,5000,nuAlimenteaza1
+ENTER bancomat1,V$alimentareBancomat1
+nuAlimenteaza1 ASSIGN sumaCurenta2,S$bancomat2
+TEST LE P$sumaCurenta2,5000,nuAlimenteaza
+ENTER bancomat2,V$alimentareBancomat2
+nuAlimenteaza TERMINATE
+
+; Adaugam blocurile
+
+GENERATE (10#60)
+TERMINATE 1
+
+; Pentru rulare dam: START 1
+
+; --------------------------------------------------------------------------------------------------
+
+; Punctul 4: Modificati programul astfel incat frecventa de aparitie a clientilor la bancomat
+; sa fie de 5 clienti pe ora in primele doua ore, 10 clienti pe ora in urmatoarea ora, 20 de clienti pe ora
+; in urmatoarele 5 ore si 10 clienti pe ora in urmatoarele 2 ore.
+
+; definirea unor constante/expresii variabile si entitati necesare in cadrul programului
+capacitateMaxima EQU 10000
+; se predefineste constanta capacitateMaxima
+alimentareBancomat1 VARIABLE capacitateMaxima - P$sumaCurenta1
+alimentareBancomat2 VARIABLE capacitateMaxima - P$sumaCurenta2
+; se predefineste o expresie care variaza in sistem pentru modelarea sumei cu care
+; angajatul unei banci alimenteaza bancomatul daca este necesar
+sumaExtrasa VARIABLE 10#(DUNIFORM(1,0,195)) + 50
+bancomat1 STORAGE 10000
+bancomat2 STORAGE 10000
+; bancomat1 (bancomat2) - numele entitatii de depozitare, va contine suma existenta in bancomat
+; dupa depunerea initiala va fi de 10000 de lei in fiecare dintre bancomate
+durataTranzactiei FUNCTION RN1,D5
+0.25,3/0.65,5/0.85,8/0.95,10/1,12
+
+; capacitateMaxima - numarul maxim de unitati de depozitare, suma maxima care poate exista in bancomat
+; modelarea alimentarii initiale a bancomatului
+; initial entitatea de depozitare contine 0 unitati de depozitare ocupate
+
+GENERATE ,,,1,2
+ENTER bancomat1,capacitateMaxima
+ENTER bancomat2,capacitateMaxima
+TERMINATE
+
+; modelarea extragerilor din bancomate
+
+GENERATE 12,,,10
+TRANSFER ,intrare
+
+GENERATE 6,,120,10
+TRANSFER ,intrare
+
+GENERATE 3,,180,100
+TRANSFER ,intrare
+
+GENERATE 6,,480
+
+intrare TRANSFER 0.5,,mergiLaBancomat2
+SEIZE banc1
+ASSIGN 1,banc1
+ASSIGN suma1,V$sumaExtrasa
+TEST GE S$bancomat1,P$suma1,pleaca
+LEAVE bancomat1,P$suma1
+TRANSFER ,durata
+mergiLaBancomat2 SEIZE banc2
+ASSIGN 1,banc2
+ASSIGN suma2,V$sumaExtrasa
+TEST GE S$bancomat2,P$suma2,pleaca
+LEAVE bancomat2,P$suma2
+durata ADVANCE FN$durataTranzactiei
+; durataTranzactiei - poate lua una dintre valorile i = 3; 5; 8; 10; 12 cu probabilitatile asociate 
+; pi = 0.25; 0.4; 0.2; 0.1; 0.05
+pleaca RELEASE P1
+TERMINATE 
+
+; modelarea alimentarii bancomatului la fiecare 2 ore daca angajatul constata ca bancomatul detine 
+; o suma mai mica de 5000 de lei
+GENERATE 120
+ASSIGN sumaCurenta1,S$bancomat1
+TEST LE P$sumaCurenta1,5000,nuAlimenteaza1
+ENTER bancomat1,V$alimentareBancomat1
+nuAlimenteaza1 ASSIGN sumaCurenta2,S$bancomat2
+TEST LE P$sumaCurenta2,5000,nuAlimenteaza
+ENTER bancomat2,V$alimentareBancomat2
+nuAlimenteaza TERMINATE
+
+GENERATE (10#60)
+TERMINATE 1
+
+; --------------------------------------------------------------------------------------------------
+
+; Punctul 5: Extindeti sistemul, cosiderand ca daca un client C soseste in intervalul de simulare 
+; 3 ore - 5 ore (adica ceasul simularii este intre 3 si 5 ore) atunci daca la coada se gasesc 
+; mai mult de 2 clienti atunci clientul C nu asteapta (se modeleaza iesirea acestuia din sistem).
+
+; definirea unor constante/expresii variabile si entitati necesare in cadrul programului
+capacitateMaxima EQU 10000
+; se predefineste constanta capacitateMaxima
+alimentareBancomat1 VARIABLE capacitateMaxima - P$sumaCurenta1
+alimentareBancomat2 VARIABLE capacitateMaxima - P$sumaCurenta2
+; se predefineste o expresie care variaza in sistem pentru modelarea sumei cu care
+; angajatul unei banci alimenteaza bancomatul daca este necesar
+sumaExtrasa VARIABLE 10#(DUNIFORM(1,0,195)) + 50
+bancomat1 STORAGE 10000
+bancomat2 STORAGE 10000
+; bancomat1 (bancomat2) - numele entitatii de depozitare, va contine suma existenta in bancomat
+; dupa depunerea initiala va fi de 10000 de lei in fiecare dintre bancomate
+durataTranzactiei FUNCTION RN1,D5
+0.25,3/0.65,5/0.85,8/0.95,10/1,12
+timp BVARIABLE (C1 > 180 'AND' C1 < 300)
+
+; capacitateMaxima - numarul maxim de unitati de depozitare, suma maxima care poate exista in bancomat
+; modelarea alimentarii initiale a bancomatului
+; initial entitatea de depozitare contine 0 unitati de depozitare ocupate
+
+GENERATE ,,,1,2
+ENTER bancomat1,capacitateMaxima
+ENTER bancomat2,capacitateMaxima
+TERMINATE
+
+verifica1 TEST G Q$coada1,2,intra1
+TERMINATE
+
+verifica2 TEST G Q$coada2,2,intra2
+TERMINATE
+
+; modelarea extragerilor din bancomate
+
+GENERATE (Exponential(1,0,20))
+TRANSFER 0.5,,mergiLaBancomat2
+TEST E BV$timp,0,verifica1
+intra1 QUEUE coada1
+SEIZE banc1
+DEPART coada1
+ASSIGN 1,banc1
+ASSIGN suma1,V$sumaExtrasa
+TEST GE S$bancomat1,P$suma1,pleaca
+LEAVE bancomat1,P$suma1
+TRANSFER ,durata
+mergiLaBancomat2 TEST E BV$timp,0,verifica2
+intra2 QUEUE coada2
+SEIZE banc2
+DEPART coada2
+ASSIGN 1,banc2
+ASSIGN suma2,V$sumaExtrasa
+TEST GE S$bancomat2,P$suma2,pleaca
+LEAVE bancomat2,P$suma2
+durata ADVANCE FN$durataTranzactiei
+; durataTranzactiei - poate lua una dintre valorile i = 3; 5; 8; 10; 12 cu probabilitatile asociate 
+; pi = 0.25; 0.4; 0.2; 0.1; 0.05
+pleaca RELEASE P1
+TERMINATE 
+
+; modelarea alimentarii bancomatului la fiecare 2 ore daca angajatul constata ca bancomatul detine 
+; o suma mai mica de 5000 de lei
+GENERATE 120
+ASSIGN sumaCurenta1,S$bancomat1
+TEST LE P$sumaCurenta1,5000,nuAlimenteaza1
+ENTER bancomat1,V$alimentareBancomat1
+nuAlimenteaza1 ASSIGN sumaCurenta2,S$bancomat2
+TEST LE P$sumaCurenta2,5000,nuAlimenteaza
+ENTER bancomat2,V$alimentareBancomat2
+nuAlimenteaza TERMINATE
+
+GENERATE (10#60)
+TERMINATE 1
+
+; --------------------------------------------------------------------------------------------------
+
+; Punctul 6: Reprezentati grafic distributia timpului petrecut de un client al bancii pentru
+; a extrage de la bancomat suma dorita.
+
+; Se introduc blocurile TABLE si TABULATE
+
+; definirea unor constante/expresii variabile si entitati necesare in cadrul programului
+capacitateMaxima EQU 10000
+; se predefineste constanta capacitateMaxima
+alimentareBancomat1 VARIABLE capacitateMaxima - P$sumaCurenta1
+alimentareBancomat2 VARIABLE capacitateMaxima - P$sumaCurenta2
+; se predefineste o expresie care variaza in sistem pentru modelarea sumei cu care
+; angajatul unei banci alimenteaza bancomatul daca este necesar
+sumaExtrasa VARIABLE 10#(DUNIFORM(1,0,195)) + 50
+bancomat1 STORAGE 10000
+bancomat2 STORAGE 10000
+; bancomat1 (bancomat2) - numele entitatii de depozitare, va contine suma existenta in bancomat
+; dupa depunerea initiala va fi de 10000 de lei in fiecare dintre bancomate
+durataTranzactiei FUNCTION RN1,D5
+0.25,3/0.65,5/0.85,8/0.95,10/1,12
+histTimp TABLE M1,5,5,15
+
+; capacitateMaxima - numarul maxim de unitati de depozitare, suma maxima care poate exista in bancomat
+; modelarea alimentarii initiale a bancomatului
+; initial entitatea de depozitare contine 0 unitati de depozitare ocupate
+
+GENERATE ,,,1,2
+ENTER bancomat1,capacitateMaxima
+ENTER bancomat2,capacitateMaxima
+TERMINATE
+
+; modelarea extragerilor din bancomate
+
+GENERATE (Exponential(1,0,20))
+TRANSFER 0.5,,mergiLaBancomat2
+SEIZE banc1
+ASSIGN 1,banc1
+ASSIGN suma1,V$sumaExtrasa
+TEST GE S$bancomat1,P$suma1,pleaca
+LEAVE bancomat1,P$suma1
+TRANSFER ,durata
+mergiLaBancomat2 SEIZE banc2
+ASSIGN 1,banc2
+ASSIGN suma2,V$sumaExtrasa
+TEST GE S$bancomat2,P$suma2,pleaca
+LEAVE bancomat2,P$suma2
+durata ADVANCE FN$durataTranzactiei
+; durataTranzactiei - poate lua una dintre valorile i = 3; 5; 8; 10; 12 cu probabilitatile asociate 
+; pi = 0.25; 0.4; 0.2; 0.1; 0.05
+pleaca RELEASE P1
+TABULATE histTimp
+TERMINATE 
+
+; modelarea alimentarii bancomatului la fiecare 2 ore daca angajatul constata ca bancomatul detine 
+; o suma mai mica de 5000 de lei
+GENERATE 120
+ASSIGN sumaCurenta1,S$bancomat1
+TEST LE P$sumaCurenta1,5000,nuAlimenteaza1
+ENTER bancomat1,V$alimentareBancomat1
+nuAlimenteaza1 ASSIGN sumaCurenta2,S$bancomat2
+TEST LE P$sumaCurenta2,5000,nuAlimenteaza
+ENTER bancomat2,V$alimentareBancomat2
+nuAlimenteaza TERMINATE
+
+GENERATE (10#60)
+TERMINATE 1
+
+; Pentru rulare dam: START 1
+
+; --------------------------------------------------------------------------------------------------
+
+; Punctul 7: Reprezentati grafic (in aceeasi fereastra) curbele asociate procentului de utilizare 
+; a bancomatelor si numarului de clienti din sistem (clientii care asteapta la coada + clientii care 
+; folosesc bancomatele) la fiecare moment al timpului de simulare.
+
+; definirea unor constante/expresii variabile si entitati necesare in cadrul programului
+capacitateMaxima EQU 10000
+; se predefineste constanta capacitateMaxima
+alimentareBancomat1 VARIABLE capacitateMaxima - P$sumaCurenta1
+alimentareBancomat2 VARIABLE capacitateMaxima - P$sumaCurenta2
+; se predefineste o expresie care variaza in sistem pentru modelarea sumei cu care
+; angajatul unei banci alimenteaza bancomatul daca este necesar
+sumaExtrasa VARIABLE 10#(DUNIFORM(1,0,195)) + 50
+bancomat1 STORAGE 10000
+bancomat2 STORAGE 10000
+; bancomat1 (bancomat2) - numele entitatii de depozitare, va contine suma existenta in bancomat
+; dupa depunerea initiala va fi de 10000 de lei in fiecare dintre bancomate
+durataTranzactiei FUNCTION RN1,D5
+0.25,3/0.65,5/0.85,8/0.95,10/1,12
+
+; capacitateMaxima - numarul maxim de unitati de depozitare, suma maxima care poate exista in bancomat
+; modelarea alimentarii initiale a bancomatului
+; initial entitatea de depozitare contine 0 unitati de depozitare ocupate
+
+GENERATE ,,,1,2
+ENTER bancomat1,capacitateMaxima
+ENTER bancomat2,capacitateMaxima
+TERMINATE
+
+; modelarea extragerilor din bancomate
+
+GENERATE (Exponential(1,0,20))
+SAVEVALUE clienti+,1
+TRANSFER 0.5,,mergiLaBancomat2
+SEIZE banc1
+ASSIGN 1,banc1
+ASSIGN suma1,V$sumaExtrasa
+TEST GE S$bancomat1,P$suma1,pleaca
+LEAVE bancomat1,P$suma1
+TRANSFER ,durata
+mergiLaBancomat2 SEIZE banc2
+ASSIGN 1,banc2
+ASSIGN suma2,V$sumaExtrasa
+TEST GE S$bancomat2,P$suma2,pleaca
+LEAVE bancomat2,P$suma2
+durata ADVANCE FN$durataTranzactiei
+; durataTranzactiei - poate lua una dintre valorile i = 3; 5; 8; 10; 12 cu probabilitatile asociate 
+; pi = 0.25; 0.4; 0.2; 0.1; 0.05
+pleaca RELEASE P1
+SAVEVALUE clienti-,1
+TERMINATE 
+
+; modelarea alimentarii bancomatului la fiecare 2 ore daca angajatul constata ca bancomatul detine 
+; o suma mai mica de 5000 de lei
+GENERATE 120
+ASSIGN sumaCurenta1,S$bancomat1
+TEST LE P$sumaCurenta1,5000,nuAlimenteaza1
+ENTER bancomat1,V$alimentareBancomat1
+nuAlimenteaza1 ASSIGN sumaCurenta2,S$bancomat2
+TEST LE P$sumaCurenta2,5000,nuAlimenteaza
+ENTER bancomat2,V$alimentareBancomat2
+nuAlimenteaza TERMINATE
+
+GENERATE (10#60)
+TERMINATE 1
+
+; Pentru rulare dam: START 1
+
+; Vedeti constructia graficelor de tip Plot din Laborator 12!
+
+; Se deschide o fereastra Plot Window si se introduc, pe rand, in campul Expression, expresiile:
+; FR$banc1, FR$banc2, X$clienti
+; FR$banc1, FR$banc2 iau valori in intervalul (0,1000).

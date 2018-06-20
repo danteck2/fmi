@@ -1,0 +1,12 @@
+1) a) ceva cu independenta datelor
+b) despre cheia primara
+2) O poveste cu o firma ce cauta pentru companii angajati, ce pot aplica la joburi, care sunt fie tehnice fie traducere, iar cele tehnice ai nevoie de limbaj si nivel, iar la cel de traducere de limbi si nivel
+a) diagrama conceptuala
+b) schema relational
+c) arborele algebric pentru o interograre
+3) aveam relatia R(nume, strada, oras, judet, cod postal)
+si ne zicea ca oras, strada, judet au un cod postal
+a) sa scriem dependentele functionale
+b) sa definesti cheia candidat si sa spui daca sunt in relatia data
+c) daca e in FN2, FN3 si de ce si daca exista o varianta mai buna
+Iar la SQL 5 exercitii

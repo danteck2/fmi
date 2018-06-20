@@ -1,0 +1,25 @@
+HTML:
++taguri semantice: section, article, p, h1-h6, header, footer
++tagurilie fizice: div, span 
++Ancore: a(href)
++Imagini: img, figure
++Video: video
++iframe: iframe contine adresa si un text care apare intre fereastra, + dimenisune
++Liste: ul, ol, dl
+
+CSS:
++fisier extern .css + un exemplu in fisier html(style inline)
++selectori: prin nume(body{ ...}), prin id(#id), prin clasa (.clasa), parinte copil(div p {}), multiplu (selector1, selector2{})
+Proprietati:
++fonturi
++culori
++backgroud
++margini
++border
++padding
++display (block-inline ca bloc, inline, inline block, none)
++meniu drop-down cu scrol in pagina
++galerie de imagini: flot, clear
++position, z-index(face o stiva, valoare mai mica inseamna mai in spate)
+
+

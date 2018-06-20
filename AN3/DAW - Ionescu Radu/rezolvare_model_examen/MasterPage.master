@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title> Titlu Examen </title>
+</head>
+<body>
+    <div style="float:left; width:30%;">
+       <div>
+            <p>Comenzi</p>
+                <ul>
+                   <li><a href="/10.%20ModelExamen/Afisare.aspx">Afisare</a></li>
+                   <li><a href="/10.%20ModelExamen/Inserare.aspx">Inserare</a></li>
+                   <li><a href="/10.%20ModelExamen/Editare.aspx">Editare</a></li>  
+                   <li><a href="/10.%20ModelExamen/Stergere.aspx">Stergere</a></li>
+                   <li><a href="/10.%20ModelExamen/CautareNume.aspx">Cautare dupa nume</a></li>
+                   <li><a href="/10.%20ModelExamen/CautareData.aspx">Cautare dupa data</a></li>
+                </ul>
+       </div>
+     </div>
+    <div style="float:right; width:70%; ">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+</body>
+</html>

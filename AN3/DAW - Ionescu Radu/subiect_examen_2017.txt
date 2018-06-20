@@ -1,0 +1,50 @@
+1. (1 p)
+	Sa se creeze o baza de date cu informatii despre filme si recenziile acordate acestora de catre utilizatori.
+	Baza de date contine urmatoarele doua tabele:
+	
+	+ Recenzii:
+		- IDRecenzie - int - id recenzie (cheie primara);
+		- Titlu - varchar - titlul recenziei;
+		- Comentariu - varchar - continutul recenziei;
+		- Nota - int - nota acordata recenziei (nota minima fiind 1, iar cea maxima 5);
+		- Data - datetime - data cand a fost postata recenzia;
+		- NumeUtilizator - varchar - numele utilizatorului care publica recenzia;
+		- IDFilm - int - id-ul filmului pentru care este postata recenzia (cheie externa);
+
+	+ Film: 
+		- IDFilm - int - id film (cheie primara);
+		- Denumire - varchar - denumirea filmului;
+
+	Creati cele doua tabele si adaugati cateva inregistrari cu ajutorul IDE-ului (4-5 in fiecare tabel).
+	Creati constrangerile de cheie primara, cheie externa, auto-increment, campuri NOT NULL. 
+
+2. (4 p)
+	 Creati o aplicatie web care implementeaza cele 4 operatii fundamentale (Create, Read, Update, Delete) pe entitatea Recenzii:
+		+Create (1 p) - Creeaza (insereaza) o noua recenzie (se va alege un film din cele existente in baza de date);
+		+Read   (0.5 p) - Listeaza recenziile impreuna cu filmele de care apartin;
+		+       (0.5 p) - Recenziile vor fi ordonate dupa nota pe care o au;
+		+Update (1 p) - Actualizeaza informatiile despre o recenzie;
+		
+		Delete (1 p) - Sterge o recenzie;
+
+3. (1 p)
+	Asigurati-va, la fiecare pas, de validitatea datelor de intrare, folosind controalele de validare astfel incat sa fie respectate tipurile din baza de date.
+
+4. (0.5 p)   
+	Adaugati un MasterPage pentru a facilita navigarea in aplicatia Web.
+
+5. (1.5 p)
+	Integrati in aplicatie facilitatea de cautare a recenziilor unui film. Se pot cauta recenzii dupa numele filmului (string-ul cautat nu trebuie sa se potriveasca exact cu denumirea) sau dupa nota pe care acestea o au. Pentru denumirea filmului se va folosi un camp textbox, iar pentru nota se va folosi un dropdownlist. In cazul specificarii ambelor campuri se va folosi operatorul AND.
+
+6. (1 p)
+	Sa se afiseze un tabel/lista cu media notelor pentru fiecare film.
+
+Note:
+	- Atentie la restrictiile de integritate si referentialitate ale bazei de date (chei primare, chei externe, campuri not null)!       
+	- ID-urile nu vor fi vizibile, editabile sau selectabile din interfata web.
+	- Timp de lucru: 1 ora si 20 minute.
+	- Se acorda 1 punct din oficiu.
+
+
+
+

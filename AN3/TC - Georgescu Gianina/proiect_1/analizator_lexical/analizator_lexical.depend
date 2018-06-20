@@ -1,0 +1,85 @@
+# depslib dependency file v1.0
+1525359576 source:d:\recovery from windows 8.1\documents\tc\analizator_lexical\dfa.cpp
+	<stdio.h>
+	"Dfa.h"
+
+1525359552 d:\recovery from windows 8.1\documents\tc\analizator_lexical\dfa.h
+	<map>
+	<string>
+	<vector>
+	<functional>
+
+1525085217 d:\recovery from windows 8.1\documents\tc\analizator_lexical\transitions.h
+
+1525302003 source:d:\recovery from windows 8.1\documents\tc\analizator_lexical\lexicalanalyzer.cpp
+	<algorithm>
+	<iostream>
+	<fstream>
+	<string>
+	"Dfa.h"
+	"LexicalAnalyzer.h"
+	"Token.h"
+
+1525285734 d:\recovery from windows 8.1\documents\tc\analizator_lexical\lexicalanalyzer.h
+	<iostream>
+	<fstream>
+	<string>
+	<list>
+	<vector>
+	"Dfa.h"
+	"Token.h"
+
+1525359791 d:\recovery from windows 8.1\documents\tc\analizator_lexical\token.h
+	<string>
+
+1525362083 source:d:\recovery from windows 8.1\documents\tc\analizator_lexical\main.cpp
+	<iostream>
+	<fstream>
+	<sstream>
+	<stdio.h>
+	"Analyzer.h"
+
+1525360134 source:d:\recovery from windows 8.1\documents\tc\analizator_lexical\token.cpp
+	"Analyzer.h"
+	"Token.h"
+	<string>
+
+1525085757 source:d:\recovery from windows 8.1\documents\tc\analizator_lexical\transitions.cpp
+
+1525087764 d:\recovery from windows 8.1\documents\tc\analizator_lexical\token.cpp
+	"LexicalAnalyzer.cpp"
+	<string>
+
+1523459202 d:\recovery from windows 8.1\documents\tc\analizator_lexical\lexicalanalyzer.cpp
+	<algorithm>
+	<iostream>
+	<fstream>
+	<string>
+	"Dfa.h"
+	"LexicalAnalyzer.h"
+	"Token.h"
+
+1525085757 d:\recovery from windows 8.1\documents\tc\analizator_lexical\transitions.cpp
+
+1525090557 d:\recovery from windows 8.1\documents\tc\analizator_lexical\dfa.cpp
+	<stdio.h>
+	"Dfa.h"
+
+1525360114 source:d:\recovery from windows 8.1\documents\tc\analizator_lexical\analyzer.cpp
+	<algorithm>
+	<iostream>
+	<fstream>
+	<string>
+	"Dfa.h"
+	"Analyzer.h"
+	"Token.h"
+
+1525360120 d:\recovery from windows 8.1\documents\tc\analizator_lexical\analyzer.h
+	<iostream>
+	<fstream>
+	<string>
+	<list>
+	<vector>
+	"Dfa.h"
+	"Token.h"
+
