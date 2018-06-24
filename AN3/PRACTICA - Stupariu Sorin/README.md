@@ -3,8 +3,8 @@
 ### An: 2017-2018
 ### Descriere
 * Varianta 1: (In afara facultatii)
-	* Te angajezi in campul muncii pentru 86 ore. 
-	* Iti faci adeverinta de practica. 
+	* Te angajezi sau faci un intership pentru 86 ore. 
+	* Ceri la job adeverinta de practica. 
 	* Mergi la colocviu de practica.
 * Varianta 2: (In facultate - Echivalare cu cursul de IP) 
 	* La inceputul semestrului 2 trimiti un email prin care soliciti efectuarea stagiului de practica in facultate. 

@@ -2,5 +2,5 @@
 ### Profesor: Mitrana Victor
 ### An: 2015-2016
 ### Descriere
-* Calificativ: Usor
+* Calificativ: Mediu
 * Pentru 5: Prezinta temele la laborator. Mergi la seminarii.
