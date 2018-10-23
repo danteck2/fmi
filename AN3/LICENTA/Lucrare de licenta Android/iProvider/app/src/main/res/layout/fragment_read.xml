@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.iprovider.dan.iprovider.ReadFragment">
+
+    <Button
+        android:id="@+id/btn_add_read"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Make new read"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter reads by idMeter: "/>
+
+        <Spinner
+            android:id="@+id/spinner_id_meter_read_filter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/readListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:divider="@color/colorDivider"
+        android:dividerHeight="2dp"
+        tools:listitem="@layout/item_read"/>
+
+
+</FrameLayout>

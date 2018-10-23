@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_customer"
+            android:icon="@drawable/customers"
+            android:title="Customers" />
+        <item
+            android:id="@+id/nav_bill"
+            android:icon="@drawable/bills"
+            android:title="Bills" />
+        <item
+            android:id="@+id/nav_read"
+            android:icon="@drawable/reads"
+            android:title="Reads" />
+        <item
+            android:id="@+id/nav_tool"
+            android:icon="@drawable/print_tools"
+            android:title="Bill Tools" />
+    </group>
+
+    <item android:title="Support">
+        <menu>
+            <item
+                android:id="@+id/nav_print"
+                android:icon="@drawable/help"
+                android:title="Help" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/about"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>

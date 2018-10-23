@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:layout_marginTop="100dp"
+    tools:context=".ReadAddActivity">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_id_meter_add_read"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ID meter" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/txt_id_meter_add_read_edit"
+                    android:layout_width="265dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+                <Button
+                    android:id="@+id/btn_scan_meter_add_read_activity"
+                    android:text="Scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_current_read_add_read"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Current Read" />
+
+            <EditText
+                android:id="@+id/txt_current_read_add_read_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+        </LinearLayout>
+    </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="200dp">
+
+            <TextView
+                android:id="@+id/txt_error_read_add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#f94531"
+                android:text="" />
+
+            <Button
+                android:id="@+id/btn_scan_read_activity"
+                android:text="Scan automaticly"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btn_add_read_activity"
+                android:text="Add new read"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_back_read_add_activity"
+                android:text="Back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+</RelativeLayout>

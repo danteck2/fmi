@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">iProvider</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="send_button_label">Send</string>
+    <string name="title_activity_main">iProvider</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">iProvider User</string>
+    <string name="nav_header_subtitle">iprovider.email@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="followers_hint" />
+</resources>

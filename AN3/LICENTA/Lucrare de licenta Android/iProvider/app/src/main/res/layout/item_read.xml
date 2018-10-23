@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_id_meter_read_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="idMeter: "
+            tools:text="idMeter: "/>
+        <TextView
+            android:id="@+id/item_id_meter_read"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            tools:text="idMeter"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/item_first_last_name_read_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name: "
+            tools:text="User Name: "/>
+        <TextView
+            android:id="@+id/item_first_last_name_read"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="username"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/item_uid_read_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UserID: "
+            tools:text="UserID: "/>
+        <TextView
+            android:id="@+id/item_uid_read"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="uid"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/item_date_read_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date: "
+            tools:text="Date: "/>
+        <TextView
+            android:id="@+id/item_date_read"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="data"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/item_current_read_read_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Current read: "
+            tools:text="Current read: "/>
+        <TextView
+            android:id="@+id/item_current_read_read"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="current"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".PrintBillActivity">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Company details" />
+
+            <TextView
+                android:id="@+id/txt_company_name_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Company name" />
+            <EditText
+                android:id="@+id/txt_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/txt_company_address_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address" />
+            <EditText
+                android:id="@+id/txt_company_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/txt_company_phone_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Phone" />
+            <EditText
+                android:id="@+id/txt_company_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
+
+            <TextView
+                android:id="@+id/txt_company_cif_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="C.I.F." />
+            <EditText
+                android:id="@+id/txt_company_cif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/txt_company_iban_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IBAN" />
+            <EditText
+                android:id="@+id/txt_company_iban"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Bill detais" />
+
+            <TextView
+                android:id="@+id/txt_bill_vat_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="VAT" />
+            <EditText
+                android:id="@+id/txt_bill_vat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/txt_bill_unit_price_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Unit price" />
+            <EditText
+                android:id="@+id/txt_bill_unit_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/txt_bill_currency_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Currency" />
+            <EditText
+                android:id="@+id/txt_bill_currency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/txt_bill_last_date_pay_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Last date for pay:" />
+            <EditText
+                android:id="@+id/txt_bill_last_date_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date" />
+
+            <Button
+                android:id="@+id/btn_bill_generate_pdf"
+                android:text="Generate pdf for print"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_bill_back_generate_pdf"
+                android:text="Back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

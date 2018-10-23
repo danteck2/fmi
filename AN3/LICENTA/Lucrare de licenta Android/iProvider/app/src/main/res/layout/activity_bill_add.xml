@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BillAddActivity">
+
+    <SurfaceView
+        android:id="@+id/camera_scan_id_bill"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
+
+    <TextView
+        android:id="@+id/txt_scan_result_id_bill"
+        android:layout_below="@+id/camera_scan_id_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:text="Please focus camera to QR code!"/>
+    <Button
+        android:id="@+id/btn_qr_confirm_paid_bill"
+        android:layout_below="@+id/txt_scan_result_id_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm paid bill"/>
+    <Button
+        android:id="@+id/btn_qr_ok_id_bill"
+        android:layout_below="@+id/btn_qr_confirm_paid_bill"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"/>
+
+</RelativeLayout>

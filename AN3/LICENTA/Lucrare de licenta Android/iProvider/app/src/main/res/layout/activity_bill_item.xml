@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".BillItemActivity">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_id_bill_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="ID bill" />
+            <TextView
+                android:id="@+id/txt_id_bill_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="id" />
+
+            <TextView
+                android:id="@+id/txt_id_meter_bill_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="ID meter" />
+            <TextView
+                android:id="@+id/txt_id_meter_bill_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="idmeter" />
+
+            <TextView
+                android:id="@+id/txt_period_bill_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Period" />
+            <TextView
+                android:id="@+id/txt_period_bill_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="period" />
+
+            <TextView
+                android:id="@+id/txt_prior_read_bill_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Prior Read" />
+            <TextView
+                android:id="@+id/txt_prior_read_bill_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="priorRead" />
+
+            <TextView
+                android:id="@+id/txt_current_read_bill_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Current Read" />
+            <TextView
+                android:id="@+id/txt_current_read_bill_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="currentRead" />
+
+            <TextView
+                android:id="@+id/txt_status_bill_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Status" />
+            <TextView
+                android:id="@+id/txt_status_bill_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="status" />
+
+            <TextView
+                android:id="@+id/txt_debt_bill_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Debt" />
+            <TextView
+                android:id="@+id/txt_debt_bill_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="debt" />
+
+
+            <Button
+                android:id="@+id/btn_update_bill"
+                android:text="Paid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_back_bill"
+                android:text="Back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_horizontal_margin"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/item_id_bill_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:text="Id: "
+            tools:text="Id: "/>
+
+        <TextView
+            android:id="@+id/item_id_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            tools:text="id"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_id_meter_bill_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="idMeter: "
+            tools:text="idMeter: "/>
+
+        <TextView
+            android:id="@+id/item_id_meter_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="idMeter"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/item_period_bill_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Period: "
+            tools:text="Period: "/>
+        <TextView
+            android:id="@+id/item_period_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="period"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/item_prior_read_bill_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prior read: "
+            tools:text="Prior read: "/>
+        <TextView
+            android:id="@+id/item_prior_read_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="prior"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/item_current_read_bill_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Current: "
+            tools:text="Current: "/>
+        <TextView
+            android:id="@+id/item_current_read_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="current"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/item_status_bill_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Status: "
+            tools:text="Status: "/>
+        <TextView
+            android:id="@+id/item_status_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="status"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/item_debt_bill_final"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:text="Debt: "
+            tools:text="Debt: "/>
+        <TextView
+            android:id="@+id/item_debt_bill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            tools:text="debt"/>
+    </LinearLayout>
+
+
+</LinearLayout>

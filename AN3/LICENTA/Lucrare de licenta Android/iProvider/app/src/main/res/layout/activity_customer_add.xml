@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CustomerAddActivity">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_id_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID customer" />
+
+        <EditText
+            android:id="@+id/txt_id_customer_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/txt_id_meter_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ID meter" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/txt_id_meter_customer_edit"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_gravity="left"/>
+
+            <Button
+                android:id="@+id/btn_scan_id_meter_customer"
+                android:text="Scan"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_gravity="right"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_name_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First and last name" />
+
+        <EditText
+            android:id="@+id/txt_name_customer_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/txt_account_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account number" />
+
+        <EditText
+            android:id="@+id/txt_account_number_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/txt_national_id_number_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="National ID nubmer" />
+
+        <EditText
+            android:id="@+id/txt_national_id_number_customer_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/txt_email_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email" />
+
+        <EditText
+            android:id="@+id/txt_email_customer_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/txt_phone_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone number" />
+
+        <EditText
+            android:id="@+id/txt_phone_customer_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone" />
+        <TextView
+            android:id="@+id/txt_address_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Postal Address" />
+
+        <EditText
+            android:id="@+id/txt_address_customer_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress" />
+
+        <TextView
+            android:id="@+id/txt_last_read_date_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last read date:" />
+
+        <EditText
+            android:id="@+id/txt_last_read_date_customer_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date" />
+        <TextView
+            android:id="@+id/txt_last_read_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prior read" />
+
+        <EditText
+            android:id="@+id/txt_last_read_customer_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+        <TextView
+            android:id="@+id/txt_balance_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Balance" />
+
+        <EditText
+            android:id="@+id/txt_balance_customer_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/txt_error_customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#f94531"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btn_add_customer"
+            android:text="Add new customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btn_back_customer"
+            android:text="Back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

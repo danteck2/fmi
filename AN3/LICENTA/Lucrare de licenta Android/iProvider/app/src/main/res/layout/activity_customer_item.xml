@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CustomerItemActivity">
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_id_customer_item_final"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="ID customer" />
+
+            <TextView
+                android:id="@+id/txt_id_customer_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5680645642" />
+
+            <TextView
+                android:id="@+id/txt_id_meter_customer_item_final"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="ID meter" />
+            <TextView
+                android:id="@+id/txt_id_meter_customer_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="idmeter" />
+
+
+            <TextView
+                android:id="@+id/txt_name_customer_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="First and last name" />
+            <TextView
+                android:id="@+id/txt_name_customer_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="name" />
+
+            <TextView
+                android:id="@+id/txt_account_number_customer_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Account number" />
+            <TextView
+                android:id="@+id/txt_account_number_customer_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ac_number" />
+
+            <TextView
+                android:id="@+id/txt_national_id_number_customer_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="National ID number" />
+            <TextView
+                android:id="@+id/txt_national_id_number_customer_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="nationalidnumber" />
+
+            <TextView
+                android:id="@+id/txt_email_customer_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Email" />
+            <TextView
+                android:id="@+id/txt_email_customer_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="email" />
+
+            <TextView
+                android:id="@+id/txt_phone_customer_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Phone number" />
+            <TextView
+                android:id="@+id/txt_phone_customer_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="phone" />
+
+            <TextView
+                android:id="@+id/txt_address_customer_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Postal Address" />
+            <TextView
+                android:id="@+id/txt_address_customer_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="address" />
+
+            <TextView
+                android:id="@+id/txt_last_read_date_customer_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Last read date:" />
+            <TextView
+                android:id="@+id/txt_last_read_date_customer_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="date" />
+
+            <TextView
+                android:id="@+id/txt_last_read_customer_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Prior read" />
+            <TextView
+                android:id="@+id/txt_last_read_customer_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lastRead" />
+
+            <TextView
+                android:id="@+id/txt_balance_customer_item_final"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:text="Balance" />
+            <TextView
+                android:id="@+id/txt_balance_customer_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="balance" />
+
+
+            <Button
+                android:id="@+id/btn_update_customer"
+                android:text="Update"
+                android:layout_width="match_parent"
+                android:layout_height="36dp" />
+            <Button
+                android:id="@+id/btn_delete_customer"
+                android:text="Delete"
+                android:layout_width="match_parent"
+                android:layout_height="36dp" />
+            <Button
+                android:id="@+id/btn_back_item_customer"
+                android:text="Back"
+                android:layout_width="match_parent"
+                android:layout_height="36dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
