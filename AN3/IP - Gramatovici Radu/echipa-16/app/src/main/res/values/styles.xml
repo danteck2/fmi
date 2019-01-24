@@ -1,0 +1,181 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowTitleSize">0dp</item>
+    </style>
+
+    <!-- Style for a tab that displays a category name -->
+    <style name="CategoryTab" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@android:color/white</item>
+        <item name="tabSelectedTextColor">@android:color/black</item>
+        <item name="tabTextAppearance">@style/CategoryTabTextAppearance</item>
+    </style>
+
+    <!-- Text appearance style for a category tab -->
+    <style name="CategoryTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">#A8A19E</item>
+    </style>
+    <style name="login_button_style">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="login_status_style">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_below">@id/login_button</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+    <style name="profile_info_container_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+    <style name="user_pic_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="user_name_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_toRightOf">@id/user_pic</item>
+        <item name="android:layout_marginLeft">@dimen/margin</item>
+    </style>
+    
+    <style name="my_books_style">
+        <item name="android:text">@string/my_books</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:textSize">@dimen/h1</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="log_out_style">
+        <item name="android:layout_width">@dimen/log_out_width</item>
+        <item name="android:layout_height">@dimen/log_out_height</item>
+        <item name="android:text">@string/log_out</item>
+        <item name="android:layout_toEndOf">@id/user_pic</item>
+        <item name="android:layout_below">@id/user_name</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+    <style name="bookshelf_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:background">@color/colorButton</item>
+        <item name="android:textColor">@color/colorButtonText</item>
+    </style>
+    <style name="search_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:background">@color/colorButton</item>
+        <item name="android:textColor">@color/colorButtonText</item>
+    </style>
+    <style name="discover_hotizontal_container_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin</item>
+        <item name="android:layout_marginRight">@dimen/margin</item>
+        <item name="android:layout_marginBottom">@dimen/margin</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="discover_title_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/margin</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="discover_input_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">4</item>
+        <item name="android:background">@drawable/text_input_border</item>
+        <item name="android:ellipsize">start</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="discover_empty_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:visibility">gone</item>
+    </style>
+    <style name="book_cover_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+    <style name="book_item_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">@dimen/margin2</item>
+        <item name="android:layout_marginLeft">@dimen/margin</item>
+        <item name="android:layout_marginRight">@dimen/margin</item>
+    </style>
+    <style name="book_item_style2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+    <style name="book_data_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/margin2</item>
+    </style>
+    <style name="book_data_container_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_marginTop">@dimen/margin</item>
+    </style>
+    <style name="book_rate_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">1.0</item>
+        <item name="android:layout_marginLeft">@dimen/margin</item>
+    </style>
+    <style name="favorite_button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/margin</item>
+        <item name="android:background">@drawable/ic_favorite_false</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+    <style name="comment_box_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:inputType">textMultiLine</item>
+        <item name="android:lines">5</item>
+        <item name="android:minLines">3</item>
+        <item name="android:maxLines">10</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+    </style>
+    <style name="send_comment_button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="android:background">@color/colorButton</item>
+        <item name="android:textColor">@color/colorButtonText</item>
+    </style>
+    <style name="radio_button_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">@dimen/margin</item>
+        <item name="android:layout_marginRight">@dimen/margin</item>
+    </style>
+</resources>

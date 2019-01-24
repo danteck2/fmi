@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin">16dp</dimen>
+    <dimen name="h1">16sp</dimen>
+    <dimen name="log_out_width">100dp</dimen>
+    <dimen name="log_out_height">36dp</dimen>
+    <dimen name="margin2">8dp</dimen>
+</resources>

@@ -1,0 +1,36 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ro.unibuc.fmi.bookstoread.Fragment.ProfileFragment">
+
+<RelativeLayout
+    style="@style/profile_info_container_style">
+    <ImageView
+        tools:src="@android:drawable/ic_delete"
+        android:id="@+id/user_pic"
+        style="@style/user_pic_style" />
+    <TextView
+        tools:text="Name"
+        android:id="@+id/user_name"
+        style="@style/user_name_style"/>
+    <Button
+        style="@style/log_out_style"
+        android:id="@+id/log_out_button"/>
+</RelativeLayout>
+    <TextView
+        style="@style/my_books_style" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/books_rv"
+        android:layout_margin="@dimen/margin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+    <TextView
+        android:id="@+id/no_books"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

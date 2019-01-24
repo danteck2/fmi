@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ro.unibuc.fmi.bookstoread.Fragment.DiscoverFragment">
+
+    <TextView
+        android:id="@+id/no_books"
+        style="@style/discover_empty_style"
+        tools:text="Empty" />
+
+    <LinearLayout android:layout_marginTop="@dimen/margin" style="@style/discover_hotizontal_container_style">
+        <TextView
+            android:id="@+id/title"
+            style="@style/discover_title_style"
+            android:text="@string/title" />
+        <EditText
+            android:id="@+id/title_search"
+            style="@style/discover_input_style" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/discover_hotizontal_container_style">
+        <TextView
+            android:id="@+id/author"
+            style="@style/discover_title_style"
+            android:text="@string/author" />
+
+        <EditText
+            android:id="@+id/author_search"
+            style="@style/discover_input_style"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/discover_hotizontal_container_style">
+        <TextView
+            android:id="@+id/subject"
+            style="@style/discover_title_style"
+            android:text="@string/subject" />
+        <EditText
+            android:id="@+id/subject_search"
+            style="@style/discover_input_style"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/discover_hotizontal_container_style">
+        <TextView
+            android:id="@+id/isbn"
+            style="@style/discover_title_style"
+            android:text="@string/isbn" />
+        <EditText
+            android:id="@+id/isbn_search"
+            style="@style/discover_input_style"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/search_button"
+        style="@style/search_button_style"
+        android:text="@string/search_button" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/books_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"/>
+
+</LinearLayout>

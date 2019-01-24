@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ro.unibuc.fmi.bookstoread.LoginActivity"
+    android:background="@drawable/login_bg">
+
+
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
+        style="@style/login_button_style"
+        tools:layout_editor_absoluteX="103dp"
+        tools:layout_editor_absoluteY="283dp" />
+
+    <TextView
+        android:id="@+id/login_status"
+        style="@style/login_status_style"
+        tools:layout_editor_absoluteX="172dp"
+        tools:layout_editor_absoluteY="341dp"
+        tools:text="Status" />
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ro.unibuc.fmi.bookstoread.BookActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/book_cover"
+                style="@style/book_cover_style"
+                tools:src="@mipmap/ic_launcher" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/book_data_container_style">
+                    <TextView
+                        style="@style/book_item_style"
+                        android:text="@string/title" />
+                    <TextView
+                        android:id="@+id/book_title"
+                        style="@style/book_data_style"
+                        tools:text="BookTitle" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/book_data_container_style">
+                    <TextView
+                        style="@style/book_item_style"
+                        android:text="@string/author" />
+                    <TextView
+                        android:id="@+id/book_author"
+                        style="@style/book_data_style"
+                        tools:text="BookAuthor" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/book_data_container_style">
+                    <TextView
+                        style="@style/book_item_style"
+                        android:text="@string/total_votes" />
+                    <TextView
+                        android:id="@+id/book_vote"
+                        style="@style/book_data_style"
+                        android:drawablePadding="@dimen/margin2"
+                        android:drawableStart="@drawable/ic_vote"
+                        tools:text="4.5" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RatingBar
+            android:id="@+id/book_rating_bar"
+            style="@style/book_rate_style" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/book_item_style2"
+                android:text="@string/description" />
+
+            <ImageButton
+                android:id="@+id/book_favorite"
+                style="@style/favorite_button_style" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/book_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin" />
+
+        <EditText
+            android:id="@+id/book_comment"
+            style="@style/comment_box_style" />
+
+        <RadioGroup
+            android:id="@+id/book_read_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/not_read"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/not_read"
+                style="@style/radio_button_style"
+                android:text="@string/to_read" />
+
+            <RadioButton
+                style="@style/radio_button_style"
+                android:text="@string/reading" />
+
+            <RadioButton
+                style="@style/radio_button_style"
+                android:text="@string/read" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/book_send_comment"
+            style="@style/send_comment_button"
+            android:text="@string/send_comment" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/reviews_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

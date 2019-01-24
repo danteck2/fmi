@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ro.unibuc.fmi.bookstoread.Fragment.BookshelvesFragment">
+
+    <Button
+        android:id="@+id/recommendations_button"
+        style = "@style/bookshelf_button_style"
+        android:text="@string/recommendations_button" />
+    <Button
+        android:id="@+id/favorites_button"
+        style = "@style/bookshelf_button_style"
+        android:text="@string/favorites_button"/>
+    <Button
+        android:id="@+id/to_read_button"
+        style = "@style/bookshelf_button_style"
+        android:text="@string/to_read_button"/>
+    <Button
+        android:id="@+id/reading_button"
+        style = "@style/bookshelf_button_style"
+        android:text="@string/reading_button"/>
+    <Button
+        android:id="@+id/have_read_button"
+        style = "@style/bookshelf_button_style"
+        android:text="@string/have_read_button"/>
+    <Button
+        android:id="@+id/reviewed_button"
+        style = "@style/bookshelf_button_style"
+        android:text="@string/reviewed_button"/>
+
+
+</LinearLayout>

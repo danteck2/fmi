@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">BooksToRead</string>
+    <string name="facebook_app_id">345251002651283</string>
+    <string name="fb_login_protocol_scheme">fb345251002651283</string>
+    <string name="login_cancelled">Login was cancelled</string>
+    <string name="login_error">There was an error while trying to log in.</string>
+    <string name="corner_menu_option_1">Log out</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="category_profile">Profile</string>
+    <string name="category_bookshelves">Bookshelves</string>
+    <string name="category_discover">Discover</string>
+
+    <string name="my_books">My books</string>
+    <string name="log_out">Log out</string>
+
+    <string name="no_books">There are no books!</string>
+    <string name="no_internet_connection">There is no internet connection!</string>
+
+    <string name="recommendations_button">Recommendations</string>
+    <string name="favorites_button">Favorites</string>
+    <string name="to_read_button">To Read</string>
+    <string name="reading_button">Reading</string>
+    <string name="have_read_button">Have Read</string>
+    <string name="reviewed_button">Reviewed</string>
+
+    <string name="search_button">Search</string>
+    <string name="search_error">You should complete at least 1 field.</string>
+    <string name="title">Title</string>
+    <string name="author">Author</string>
+    <string name="subject">Subject</string>
+    <string name="isbn">ISBN</string>
+    <string name="total_votes">Average vote:</string>
+    <string name="description">Description</string>
+    <string name="send_comment">Send comment</string>
+    <string name="to_read">To read</string>
+    <string name="reading">Reading</string>
+    <string name="read">Read</string>
+    <string name="book_summary">Book summary</string>
+</resources>
